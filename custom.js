@@ -67,17 +67,17 @@ $(document).ready(function() {
 
 // selecting based on attributes
 $(document).ready(function() {
-  $("div[target='_blank']").click(function(){
+  $("div[target='_blank']").click(function() {
     console.log("Target is clicked");
   });
 });
 
 // To select the type
 $(document).ready(function() {
-  $(":button").click(function(){
+  $(":button").click(function() {
     console.log("Button is clicked");
   });
-  $(":text").click(function(){
+  $(":text").click(function() {
     console.log("Text is Entered");
   });
 });
@@ -85,7 +85,29 @@ $(document).ready(function() {
 // selection based on the content present
 $(document).ready(function() {
   $("p:contains(rebel)").css("background-color", "orange"),
-  $("p:contains(people)").css("background-color", "orange");
+    $("p:contains(people)").css("background-color", "orange");
 });
 
+//Get attribute of the particular div
+$(document).ready(function() {
+  var titleVar = $("div").attr("title");
+  console.log(titleVar);
+});
 
+//To change the attribute of the particular div using Set Attribute
+$(document).ready(function() {
+  var titleVar = $("div").attr("title");
+  console.log(titleVar);
+  $("#oneButton").click(function() {
+    $("div").attr("title", "oneButton");
+  });
+});
+
+// Set a callback function for an attribute
+$(document).ready(function() {
+  var titleVar = $("div").attr("title");
+  console.log(titleVar);
+  $("#oneButton").click(function() {
+    $("div").attr("title", "oneButton");
+  });
+});
